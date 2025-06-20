@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Контакты — Astana IT University</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', Arial, sans-serif;
+            background: linear-gradient(135deg, #6366f1 0%, #a5b4fc 100%);
+            min-height: 100vh;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        .logo {
+            display: block;
+            margin: 40px auto 10px auto;
+            max-width: 220px;
+            filter: drop-shadow(0 0 24px #6366f1);
+        }
+        nav {
+            background: rgba(30, 27, 75, 0.85);
+            border-radius: 30px;
+            margin: 0 auto 30px auto;
+            max-width: 700px;
+            box-shadow: 0 4px 24px rgba(99,102,241,0.15);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+        nav li {
+            margin: 0 22px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 1.15em;
+            letter-spacing: 1px;
+            padding: 18px 0;
+            display: inline-block;
+            transition: color 0.2s;
+            position: relative;
+        }
+        nav a::after {
+            content: '';
+            display: block;
+            margin: 0 auto;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #a5b4fc, #6366f1);
+            border-radius: 2px;
+            transition: width 0.3s;
+        }
+        nav a:hover {
+            color: #a5b4fc;
+        }
+        nav a:hover::after {
+            width: 80%;
+        }
+        .contacts-main {
+            max-width: 600px;
+            margin: 40px auto 40px auto;
+            background: rgba(30, 27, 75, 0.85);
+            border-radius: 32px;
+            box-shadow: 0 8px 32px rgba(99,102,241,0.18);
+            padding: 50px 32px 40px 32px;
+            text-align: center;
+        }
+        .contacts-main h1 {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 2.2em;
+            margin-bottom: 18px;
+            letter-spacing: 2px;
+            font-weight: 900;
+            background: linear-gradient(90deg, #fff 30%, #a5b4fc 70%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .contacts-list {
+            margin: 30px 0 0 0;
+            padding: 0;
+            list-style: none;
+            text-align: left;
+            display: inline-block;
+        }
+        .contacts-list li {
+            margin-bottom: 22px;
+            font-size: 1.15em;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .contacts-list li span {
+            font-size: 1.6em;
+            filter: drop-shadow(0 0 8px #a5b4fc);
+        }
+        .contacts-list a {
+            color: #a5b4fc;
+            text-decoration: underline;
+            word-break: break-all;
+        }
+        .contacts-form {
+            margin-top: 40px;
+            background: rgba(255,255,255,0.10);
+            border-radius: 18px;
+            box-shadow: 0 2px 8px #6366f1a0;
+            padding: 28px 24px;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .contacts-form h2 {
+            color: #a5b4fc;
+            margin-bottom: 18px;
+            font-size: 1.15em;
+        }
+        .contacts-form input, .contacts-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+            border: none;
+            font-size: 1em;
+            font-family: 'Roboto', Arial, sans-serif;
+            background: #f8fafc;
+            color: #22223b;
+            box-sizing: border-box;
+        }
+        .contacts-form textarea {
+            min-height: 80px;
+            resize: vertical;
+        }
+        .contacts-form button {
+            background: linear-gradient(90deg, #a5b4fc, #6366f1);
+            color: #1e1b4b;
+            padding: 12px 36px;
+            border-radius: 30px;
+            font-size: 1.1em;
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s, transform 0.2s;
+            box-shadow: 0 2px 8px #6366f1a0;
+        }
+        .contacts-form button:hover {
+            background: linear-gradient(90deg, #6366f1, #a5b4fc);
+            color: #fff;
+            transform: scale(1.04);
+        }
+        .contacts-quote {
+            font-style: italic;
+            color: #e0e7ff;
+            margin: 40px 0 0 0;
+            text-align: center;
+            font-size: 1.1em;
+        }
+        .contacts-quote span {
+            color: #a5b4fc;
+            font-weight: 700;
+        }
+        footer {
+            text-align: center;
+            color: #a5b4fc;
+            padding: 30px 0 20px 0;
+            font-size: 1.1em;
+            letter-spacing: 1px;
+        }
+        @media (max-width: 700px) {
+            .contacts-main {
+                padding: 30px 5px 20px 5px;
+            }
+            .contacts-main h1 {
+                font-size: 1.3em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="лого.png" alt="Логотип Astana IT University" class="logo">
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="page.html">О университете</a></li>
+            <li><a href="admission.html">Поступление</a></li>
+            <li><a href="contact.html">Контакты</a></li>
+        </ul>
+    </nav>
+    <section class="contacts-main">
+        <h1>Контакты</h1>
+        <ul class="contacts-list">
+            <li><span>📍</span>Адрес: г. Астана, пр. Кабанбай батыра, 55А</li>
+            <li><span>📞</span>Телефон: <a href="tel:+77172645757">+7 (7172) 64-57-57</a></li>
+            <li><span>✉️</span>Email: <a href="mailto:info@aitu.kz">info@aitu.kz</a></li>
+            <li><span>🌐</span>Сайт: <a href="https://aitu.kz" target="_blank">aitu.kz</a></li>
+        </ul>
+        <form class="contacts-form">
+            <h2>Связаться с нами</h2>
+            <input type="text" name="name" placeholder="Ваше имя" required>
+            <input type="email" name="email" placeholder="Ваш email" required>
+            <textarea name="message" placeholder="Ваше сообщение" required></textarea>
+            <button type="submit">Отправить</button>
+        </form>
+        <div class="contacts-quote">
+            “AITU всегда открыт для новых идей и сотрудничества!”<br>
+            <span>— команда AITU</span>
+        </div>
+    </section>
+    <footer>
+        &copy; 2025 Astana IT University. Будущее начинается здесь!
+    </footer>
+</body>
+</html>

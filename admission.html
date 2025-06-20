@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Поступление — Astana IT University</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', Arial, sans-serif;
+            background: linear-gradient(135deg, #6366f1 0%, #a5b4fc 100%);
+            min-height: 100vh;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        .logo {
+            display: block;
+            margin: 40px auto 10px auto;
+            max-width: 220px;
+            filter: drop-shadow(0 0 24px #6366f1);
+        }
+        nav {
+            background: rgba(30, 27, 75, 0.85);
+            border-radius: 30px;
+            margin: 0 auto 30px auto;
+            max-width: 700px;
+            box-shadow: 0 4px 24px rgba(99,102,241,0.15);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+        nav li {
+            margin: 0 22px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 1.15em;
+            letter-spacing: 1px;
+            padding: 18px 0;
+            display: inline-block;
+            transition: color 0.2s;
+            position: relative;
+        }
+        nav a::after {
+            content: '';
+            display: block;
+            margin: 0 auto;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #a5b4fc, #6366f1);
+            border-radius: 2px;
+            transition: width 0.3s;
+        }
+        nav a:hover {
+            color: #a5b4fc;
+        }
+        nav a:hover::after {
+            width: 80%;
+        }
+        .section-main {
+            max-width: 900px;
+            margin: 40px auto 40px auto;
+            background: rgba(30, 27, 75, 0.85);
+            border-radius: 32px;
+            box-shadow: 0 8px 32px rgba(99,102,241,0.18);
+            padding: 60px 32px 48px 32px;
+            text-align: center;
+        }
+        .section-main h1 {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 2.5em;
+            margin-bottom: 18px;
+            letter-spacing: 2px;
+            font-weight: 900;
+            background: linear-gradient(90deg, #fff 30%, #a5b4fc 70%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .section-main p {
+            font-size: 1.25em;
+            color: #e0e7ff;
+            margin-bottom: 38px;
+            font-weight: 500;
+        }
+        .admission-steps {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .admission-step {
+            background: rgba(255,255,255,0.12);
+            border-radius: 22px;
+            box-shadow: 0 2px 16px #6366f1a0;
+            padding: 36px 32px;
+            min-width: 220px;
+            max-width: 320px;
+            text-align: center;
+            color: #fff;
+            font-size: 1.1em;
+            font-weight: 500;
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+        .admission-step:hover {
+            transform: translateY(-8px) scale(1.04);
+            box-shadow: 0 8px 32px #6366f1cc;
+        }
+        .admission-step span {
+            font-size: 2.2em;
+            display: block;
+            margin-bottom: 18px;
+            filter: drop-shadow(0 0 8px #a5b4fc);
+        }
+        .admission-btn {
+            display: inline-block;
+            background: linear-gradient(90deg, #a5b4fc, #6366f1);
+            color: #1e1b4b;
+            padding: 18px 48px;
+            border-radius: 40px;
+            font-size: 1.2em;
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-weight: 900;
+            text-decoration: none;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 24px #6366f1a0;
+            transition: background 0.2s, color 0.2s, transform 0.2s;
+            margin: 40px auto 0 auto;
+        }
+        .admission-btn:hover {
+            background: linear-gradient(90deg, #6366f1, #a5b4fc);
+            color: #fff;
+            transform: scale(1.05);
+        }
+        .admission-contact {
+            margin-top: 40px;
+            color: #e0e7ff;
+            font-size: 1.1em;
+        }
+        .admission-contact a {
+            color: #a5b4fc;
+            text-decoration: underline;
+        }
+        .admission-quote {
+            font-style: italic;
+            color: #e0e7ff;
+            margin: 40px 0 0 0;
+            text-align: center;
+            font-size: 1.15em;
+        }
+        .admission-quote span {
+            color: #a5b4fc;
+            font-weight: 700;
+        }
+        footer {
+            text-align: center;
+            color: #a5b4fc;
+            padding: 30px 0 20px 0;
+            font-size: 1.1em;
+            letter-spacing: 1px;
+        }
+        @media (max-width: 900px) {
+            .admission-steps {
+                flex-direction: column;
+                align-items: center;
+            }
+            .admission-step {
+                max-width: 90vw;
+            }
+        }
+        @media (max-width: 600px) {
+            .section-main {
+                padding: 30px 5px 20px 5px;
+            }
+            .section-main h1 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="лого.png" alt="Логотип Astana IT University" class="logo">
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="page.html">О нас</a></li>
+            <li><a href="admission.html">Поступление</a></li>
+            <li><a href="contact.html">Контакты</a></li>
+        </ul>
+    </nav>
+    <section class="section-main">
+        <h1>Поступление в AITU</h1>
+        <p>
+            Хочешь стать частью цифрового будущего? Присоединяйся к Astana IT University!<br>
+            Следуй этим шагам и начни свой путь в мире IT уже сегодня.
+        </p>
+        <div class="admission-steps">
+            <div class="admission-step"><span>�</span>Изучи направления и выбери свою будущую профессию</div>
+            <div class="admission-step"><span>📝</span>Заполни онлайн-заявку на сайте <a href="https://aitu.kz/admission" target="_blank" style="color:#a5b4fc;">aitu.kz</a></div>
+            <div class="admission-step"><span>📑</span>Подготовь документы и результаты ЕНТ/экзаменов</div>
+            <div class="admission-step"><span>💬</span>Пройди собеседование (если требуется)</div>
+            <div class="admission-step"><span>🎉</span>Получай приглашение и становись студентом AITU!</div>
+        </div>
+        <a href="https://aitu.kz/admission" target="_blank" class="admission-btn">Подать заявку онлайн</a>
+        <div class="admission-contact">
+            <p>Есть вопросы? Пиши на <a href="mailto:admission@aitu.kz">admission@aitu.kz</a> или звони: +7 (7172) 64-57-57</p>
+        </div>
+        <div class="admission-quote">
+            “AITU — это твой старт в IT-карьере и крутом студенческом комьюнити!”<br>
+            <span>— Абитуриенты и студенты AITU</span>
+        </div>
+    </section>
+    <footer>
+        &copy; 2025 Astana IT University. Будущее начинается здесь!
+    </footer>
+</body>
+</html>
