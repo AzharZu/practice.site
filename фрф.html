@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Astana IT University — Главная</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', Arial, sans-serif;
+            background: linear-gradient(135deg, #6366f1 0%, #a5b4fc 100%);
+            min-height: 100vh;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        .neon {
+            color: #fff;
+            text-shadow:
+                0 0 8px #6366f1,
+                0 0 16px #6366f1,
+                0 0 32px #a5b4fc;
+        }
+        .logo {
+            display: block;
+            margin: 40px auto 10px auto;
+            max-width: 220px;
+            filter: drop-shadow(0 0 24px #6366f1);
+        }
+        nav {
+            background: rgba(30, 27, 75, 0.85);
+            border-radius: 30px;
+            margin: 0 auto 30px auto;
+            max-width: 700px;
+            box-shadow: 0 4px 24px rgba(99,102,241,0.15);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+        nav li {
+            margin: 0 22px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 1.15em;
+            letter-spacing: 1px;
+            padding: 18px 0;
+            display: inline-block;
+            transition: color 0.2s;
+            position: relative;
+        }
+        nav a::after {
+            content: '';
+            display: block;
+            margin: 0 auto;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #a5b4fc, #6366f1);
+            border-radius: 2px;
+            transition: width 0.3s;
+        }
+        nav a:hover {
+            color: #a5b4fc;
+        }
+        nav a:hover::after {
+            width: 80%;
+        }
+        .hero {
+            text-align: center;
+            padding: 80px 20px 60px 20px;
+            background: rgba(30, 27, 75, 0.85);
+            border-radius: 32px;
+            margin: 30px auto 40px auto;
+            max-width: 800px;
+            box-shadow: 0 8px 32px rgba(99,102,241,0.18);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero h1 {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 3em;
+            margin-bottom: 18px;
+            letter-spacing: 2px;
+            font-weight: 900;
+            background: linear-gradient(90deg, #fff 30%, #a5b4fc 70%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero p {
+            font-size: 1.35em;
+            color: #e0e7ff;
+            margin-bottom: 38px;
+            font-weight: 500;
+        }
+        .hero .btn {
+            display: inline-block;
+            background: linear-gradient(90deg, #a5b4fc, #6366f1);
+            color: #1e1b4b;
+            padding: 18px 48px;
+            border-radius: 40px;
+            font-size: 1.2em;
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-weight: 900;
+            text-decoration: none;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 24px #6366f1a0;
+            transition: background 0.2s, color 0.2s, transform 0.2s;
+        }
+        .hero .btn:hover {
+            background: linear-gradient(90deg, #6366f1, #a5b4fc);
+            color: #fff;
+            transform: scale(1.05);
+        }
+        .features {
+            max-width: 1000px;
+            margin: 0 auto 40px auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            justify-content: center;
+        }
+        .feature-card {
+            background: rgba(255,255,255,0.12);
+            border-radius: 22px;
+            box-shadow: 0 2px 16px #6366f1a0;
+            padding: 36px 32px;
+            min-width: 220px;
+            max-width: 320px;
+            text-align: center;
+            color: #fff;
+            font-size: 1.1em;
+            font-weight: 500;
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+        .feature-card:hover {
+            transform: translateY(-8px) scale(1.04);
+            box-shadow: 0 8px 32px #6366f1cc;
+        }
+        .feature-card span {
+            font-size: 2.2em;
+            display: block;
+            margin-bottom: 18px;
+            filter: drop-shadow(0 0 8px #a5b4fc);
+        }
+        .departments {
+            max-width: 1000px;
+            margin: 0 auto 40px auto;
+            background: rgba(30, 27, 75, 0.85);
+            border-radius: 22px;
+            box-shadow: 0 2px 16px #6366f1a0;
+            padding: 36px 32px;
+        }
+        .departments h2 {
+            text-align: center;
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 2em;
+            color: #a5b4fc;
+            margin-bottom: 24px;
+        }
+        .departments-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 28px;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .departments-list li {
+            background: rgba(255,255,255,0.10);
+            border-radius: 16px;
+            padding: 22px 28px;
+            min-width: 180px;
+            font-size: 1.08em;
+            color: #fff;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 2px 8px #6366f1a0;
+        }
+        .departments-list li span {
+            font-size: 1.5em;
+        }
+        .student-review {
+            font-style: italic;
+            color: #e0e7ff;
+            margin: 30px 0 0 0;
+            text-align: center;
+            font-size: 1.15em;
+        }
+        .student-review span {
+            color: #a5b4fc;
+            font-weight: 700;
+        }
+        footer {
+            text-align: center;
+            color: #a5b4fc;
+            padding: 30px 0 20px 0;
+            font-size: 1.1em;
+            letter-spacing: 1px;
+        }
+        @media (max-width: 900px) {
+            .features, .departments-list {
+                flex-direction: column;
+                align-items: center;
+            }
+            .feature-card, .departments-list li {
+                max-width: 90vw;
+            }
+        }
+        @media (max-width: 600px) {
+            .hero {
+                padding: 30px 5px 20px 5px;
+            }
+            .hero h1 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="лого.png" alt="Логотип Astana IT University" class="logo">
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="page.html">О нас</a></li>
+            <li><a href="admission.html">Поступление</a></li>
+            <li><a href="contact.html">Контакты</a></li>
+        </ul>
+    </nav>
+    <section class="hero">
+        <h1 class="neon">Astana IT University</h1>
+        <p>
+            Добро пожаловать в AITU — место, где технологии встречаются с креативом, а студенты становятся лидерами цифрового будущего!
+        </p>
+        <a href="admission.html" class="btn">Поступить в AITU</a>
+        <button class="btn" onclick="makeDayBrighter()">Сделать день ярче!</button>
+    </section>
+    <section class="features">
+        <div class="feature-card"><span>🚀</span>Инновационные лаборатории и коворкинги</div>
+        <div class="feature-card"><span>🤝</span>Партнёрства с топовыми IT-компаниями</div>
+        <div class="feature-card"><span>🌍</span>Международные обмены и стажировки</div>
+        <div class="feature-card"><span>�</span>Яркая студенческая жизнь и ивенты</div>
+        <div class="feature-card"><span>💡</span>Стартап-инкубатор и поддержка идей</div>
+        <div class="feature-card"><span>🏆</span>Успешные выпускники по всему миру</div>
+    </section>
+    <section class="departments">
+        <h2>Факультеты и направления</h2>
+        <ul class="departments-list">
+            <li><span>💻</span>Программная инженерия</li>
+            <li><span>🔒</span>Кибербезопасность</li>
+            <li><span>🤖</span>Искусственный интеллект</li>
+            <li><span>📊</span>Data Science</li>
+            <li><span>🎨</span>Мультимедиа и дизайн</li>
+        </ul>
+    </section>
+    <div class="student-review">
+        “AITU — это не просто университет, а комьюнити, где ты можешь реализовать любые амбиции!”<br>
+        <span>— Данияр, студент 3 курса</span>
+    </div>
+    <footer>
+        &copy; 2025 Astana IT University. Будущее начинается здесь!
+    </footer>
+        <script>
+    // Плавное приветствие при загрузке
+    window.addEventListener('DOMContentLoaded', function() {
+        const hero = document.querySelector('.hero');
+        const greeting = document.createElement('div');
+        greeting.textContent = 'Добро пожаловать в Astana IT University!';
+        greeting.style.position = 'fixed';
+        greeting.style.top = '30px';
+        greeting.style.left = '50%';
+        greeting.style.transform = 'translateX(-50%)';
+        greeting.style.background = 'linear-gradient(90deg, #a5b4fc, #6366f1)';
+        greeting.style.color = '#1e1b4b';
+        greeting.style.padding = '18px 38px';
+        greeting.style.borderRadius = '40px';
+        greeting.style.fontSize = '1.2em';
+        greeting.style.fontFamily = "'Montserrat', Arial, sans-serif";
+        greeting.style.fontWeight = '900';
+        greeting.style.boxShadow = '0 4px 24px #6366f1a0';
+        greeting.style.opacity = '0';
+        greeting.style.transition = 'opacity 1s';
+        greeting.style.zIndex = '1000';
+        document.body.appendChild(greeting);
+        setTimeout(() => { greeting.style.opacity = '1'; }, 300);
+        setTimeout(() => { greeting.style.opacity = '0'; }, 3000);
+        setTimeout(() => { greeting.remove(); }, 4000);
+    });
+    
+    // Кнопка для смены фона и поздравления
+    function makeDayBrighter() {
+        document.body.style.background = 'linear-gradient(135deg, #fbbf24 0%, #6366f1 100%)';
+        alert('Пусть этот день будет ярким и успешным! 🚀');
+    }
+    </script>
+</body>
+</html>

@@ -163,9 +163,7 @@
     </style>
 </head>
 <body>
-    <div style="text-align: center; margin-bottom: 20px;">
-  <img src="лого.png" alt="Логотип Айту" style="width:150px;">
-</div>
+    <img src="https://aitu.edu.kz/wp-content/uploads/2022/07/aitu-logo.png" alt="Логотип Astana IT University" class="logo">
     <nav>
         <ul>
             <li><a href="index.html">Главная</a></li>
@@ -175,10 +173,11 @@
         </ul>
     </nav>
     <section class="about-section">
+        <!-- ...existing code... -->
+<button class="btn" onclick="showGreeting()">Поприветствовать университет</button>
+<!-- ...existing code... -->
         <h1 class="neon">О Astana IT University</h1>
-        <div style="text-align: center;">
-  <img src="айту.jpg" alt="Айту" style="width:250px; border-radius: 10px;">
-</div>
+        <img src="https://aitu.edu.kz/wp-content/uploads/2022/07/aitu-main.jpg" alt="Astana IT University">
         <p>
             <b>Astana IT University</b> — ведущий вуз Казахстана в области информационных технологий, основанный в 2019 году по инициативе Министерства цифрового развития, инноваций и аэрокосмической промышленности Республики Казахстан. Университет был создан для подготовки высококвалифицированных специалистов, способных стать лидерами цифровой трансформации страны.
         </p>
@@ -186,7 +185,7 @@
             Миссия AITU — формировать новое поколение IT-лидеров, способных внедрять инновации, развивать стартапы и работать в международных командах. Университет активно сотрудничает с ведущими мировыми компаниями и университетами, предоставляя студентам уникальные возможности для обучения и развития.
         </p>
         <p>
-            Подробнее о университете вы можете узнать на <a href="https://admission.astanait.edu.kz/" class="btn" target="_blank" rel="noopener">официальном сайте AITU</a>.
+            Подробнее о университете вы можете узнать на <a href="https://aitu.edu.kz/" class="btn" target="_blank" rel="noopener">официальном сайте AITU</a>.
         </p>
         <div class="founder">
             <span>Учредитель:</span> Министерство цифрового развития, инноваций и аэрокосмической промышленности РК<br>
@@ -197,5 +196,10 @@
     <footer>
         &copy; 2025 Astana IT University. Будущее начинается здесь!
     </footer>
+        <script>
+    function showGreeting() {
+        alert("Добро пожаловать в Astana IT University!");
+    }
+    </script>
 </body>
 </html>
